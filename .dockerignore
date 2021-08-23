@@ -1,0 +1,4 @@
+test
+.direnv
+.vscode
+*.egg-info

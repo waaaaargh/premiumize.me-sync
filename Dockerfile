@@ -5,6 +5,7 @@ RUN pip install -r requirements.txt
 RUN python -m build
 
 FROM python:3.8.10-alpine
+ENV PYTHONUNBUFFERED=1
 WORKDIR /src
 COPY --from=builder /src/dist/* ./
 RUN pip install *.tar.gz
